@@ -1,0 +1,153 @@
+aid: https://raw.githubusercontent.com/api-evangelist/copernicus-marine/refs/heads/main/apis.yml
+name: Copernicus Marine
+description: >-
+  The EU Copernicus Marine Environment Monitoring Service (CMEMS), operated by
+  Mercator Ocean International, provides free and open access to authoritative
+  information on the state of the global ocean and European regional seas. The
+  service delivers ocean physical and biogeochemical data through multiple APIs
+  covering temperature, salinity, sea level, currents, sea ice, and marine
+  ecosystem variables from satellite observations, in situ measurements, and
+  numerical model reanalysis and forecast products. Data can be accessed
+  programmatically via the Copernicus Marine Toolbox (Python API and CLI), the
+  OGC-compliant Web Map Tile Service (WMTS) for visualization, and the
+  Catalogue Service for the Web (CSW) for product discovery. All services
+  require a free Copernicus Marine account, except the CSW which is fully open,
+  and there are no data volume quotas or download limits.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/copernicus-marine/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+tags:
+  - Ocean
+  - Marine
+  - Oceanography
+  - Sea Level
+  - Temperature
+  - Salinity
+  - Currents
+  - Biogeochemistry
+  - Climate
+  - Environment
+  - Satellite
+  - Forecast
+  - Reanalysis
+  - Open Data
+  - EU
+apis:
+  - name: Copernicus Marine Toolbox API
+    description: >-
+      The Copernicus Marine Toolbox provides the officially supported
+      programmatic interface to the Copernicus Marine Data Store, available as
+      both a Python library and CLI. Core operations include describe (browse
+      the full product catalogue and retrieve dataset metadata), subset (extract
+      data by variable, geographic bounding box, time range, and depth range in
+      NetCDF, Zarr, CSV, or Parquet formats), get (download original production
+      files with wildcard and regex filtering), open_dataset (lazy-load datasets
+      remotely via xarray), and read_dataframe (load data directly into pandas).
+      The service offers no quota on data volume or bandwidth. Authentication
+      uses username and password stored in a credentials file or environment
+      variables COPERNICUSMARINE_SERVICE_USERNAME and
+      COPERNICUSMARINE_SERVICE_PASSWORD. A free Copernicus Marine account is
+      required.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://toolbox-docs.marine.copernicus.eu/
+    baseURL: https://data.marine.copernicus.eu
+    tags:
+      - Ocean Data
+      - Subsetting
+      - NetCDF
+      - Zarr
+      - Python
+      - CLI
+      - Download
+    properties:
+      - type: Documentation
+        url: https://toolbox-docs.marine.copernicus.eu/
+      - type: HelpCenter
+        url: https://help.marine.copernicus.eu/en/collections/9080063-copernicus-marine-toolbox
+      - type: GitHubRepository
+        url: https://github.com/mercator-ocean/copernicus-marine-toolbox
+      - type: PyPI
+        url: https://pypi.org/project/copernicusmarine/
+      - type: Registration
+        url: https://data.marine.copernicus.eu/register
+  - name: Copernicus Marine WMTS API
+    description: >-
+      The Copernicus Marine Web Map Tile Service (WMTS) is an OGC-compliant
+      REST API for visualizing ocean data as raster map tiles. It supports
+      GetCapabilities to discover available datasets and layers, GetTile to
+      retrieve cached image tiles in JPEG or PNG format, GetLegend to obtain
+      dynamic map legends in SVG or JSON, and GetFeatureInfo to query pixel-level
+      data values at specific geographic locations. Tiles are served in Web
+      Mercator (EPSG:3857), WGS 84 (EPSG:4326), and polar projections. Temporal
+      and depth dimensions are supported via TIME and ELEVATION parameters.
+      The service is fully OGC WMTS 1.0.0 compliant and INSPIRE conformant. No
+      authentication is required for tile access.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://help.marine.copernicus.eu/en/articles/6478168-how-to-use-wmts-to-visualize-data
+    baseURL: https://wmts.marine.copernicus.eu/teroWmts
+    tags:
+      - WMTS
+      - OGC
+      - Map Tiles
+      - Visualization
+      - Raster
+      - Web Mapping
+    properties:
+      - type: Documentation
+        url: https://help.marine.copernicus.eu/en/articles/6478168-how-to-use-wmts-to-visualize-data
+      - type: GetCapabilities
+        url: https://wmts.marine.copernicus.eu/teroWmts?service=WMTS&version=1.0.0&request=GetCapabilities
+  - name: Copernicus Marine CSW Catalogue API
+    description: >-
+      The Copernicus Marine Catalogue Service for the Web (CSW) provides
+      OGC-compliant metadata discovery over the full product catalogue. It
+      supports GetCapabilities, DescribeRecord, GetRecords (search and filter
+      catalogue entries), and GetRecordById (retrieve a specific product record
+      by identifier). The service is based on CSW 2.0.2 and uses ISO 19115
+      metadata records. No authentication or Copernicus Marine account is
+      required, and there are no documented rate limits or quotas for the
+      catalogue service.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://help.marine.copernicus.eu/en/articles/6643157-how-to-access-to-metadata-using-the-catalogue-service-on-the-web-csw
+    baseURL: https://csw.marine.copernicus.eu/geonetwork/csw-MYOCEAN-CORE-PRODUCTS/eng/csw
+    tags:
+      - CSW
+      - OGC
+      - Catalogue
+      - Metadata
+      - Discovery
+      - INSPIRE
+    properties:
+      - type: Documentation
+        url: https://help.marine.copernicus.eu/en/articles/6643157-how-to-access-to-metadata-using-the-catalogue-service-on-the-web-csw
+      - type: GetCapabilities
+        url: https://csw.marine.copernicus.eu/geonetwork/csw-MYOCEAN-CORE-PRODUCTS/eng/csw?service=CSW&REQUEST=GetCapabilities
+common:
+  - type: Website
+    url: https://marine.copernicus.eu/
+  - type: Documentation
+    url: https://help.marine.copernicus.eu/
+  - type: DataStore
+    url: https://data.marine.copernicus.eu/products
+  - type: Registration
+    url: https://data.marine.copernicus.eu/register
+  - type: GitHubOrg
+    url: https://github.com/mercator-ocean
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/copernicus-marine-service
+  - type: Blog
+    url: https://marine.copernicus.eu/news
+  - type: Pricing
+    url: https://marine.copernicus.eu/access-data/
+  - type: Plans
+    url: plans/copernicus-marine-plans.yml
+  - type: RateLimits
+    url: rate-limits/copernicus-marine-rate-limits.yml
+  - type: FinOps
+    url: finops/copernicus-marine-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

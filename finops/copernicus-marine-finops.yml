@@ -1,0 +1,97 @@
+name: Copernicus Marine API FinOps
+description: >-
+  Copernicus Marine Service is an EU-funded public programme operated by
+  Mercator Ocean International on behalf of the European Commission. API
+  consumers incur zero direct cost for data access, toolbox usage, or tile
+  visualization. All operational costs are borne by the EU Copernicus Programme
+  budget. Consumer-side FinOps concerns are limited to indirect costs such as
+  compute, storage, and data processing infrastructure used to work with the
+  downloaded marine data.
+specificationVersion: '1.0'
+framework: FinOps Framework FOCUS-aligned
+currency: EUR
+costModel:
+  type: Free EU Programme Service
+  directCost: 0.00
+  description: >-
+    No subscription fees, per-request charges, data volume fees, or bandwidth
+    charges are levied on API consumers. Copernicus Marine data is freely and
+    openly licensed for use by any user worldwide, including for commercial
+    purposes, under the Copernicus Data Policy.
+spend:
+  directAPISpend:
+    amount: 0.00
+    currency: EUR
+    description: >-
+      No cost to API consumers for any Copernicus Marine API service including
+      the Toolbox, WMTS tile service, or CSW catalogue.
+  indirectCosts:
+    - category: Compute
+      description: >-
+        Processing infrastructure required to analyze, transform, or visualize
+        the large-volume NetCDF, Zarr, and CSV files downloaded from the
+        Copernicus Marine Data Store. Ocean datasets can be multi-gigabyte to
+        terabyte scale depending on spatial and temporal extent.
+      estimationMethod: >-
+        Tag cloud compute costs associated with Copernicus Marine data
+        processing workloads; track CPU/GPU hours for xarray and dask jobs
+    - category: Data Storage
+      description: >-
+        Storage costs for caching downloaded ocean data products locally to
+        avoid repeated downloads across workflows. NetCDF and Zarr files can
+        be large depending on variable selection and geographic extent.
+      estimationMethod: >-
+        Track GB-months of storage allocated to Copernicus Marine datasets
+        in chosen cloud or on-premise environment
+    - category: Data Egress
+      description: >-
+        Cloud provider data transfer charges when Copernicus Marine data is
+        downloaded into cloud workloads from public internet endpoints. Large
+        subsets of global ocean products can involve significant transfer volume.
+      estimationMethod: >-
+        Monitor data-in transfer costs for downloads from data.marine.copernicus.eu
+        and related endpoints in cloud provider billing
+    - category: Engineering
+      description: >-
+        Development and maintenance effort for integrations using the
+        copernicusmarine Python library or CLI, including handling dataset
+        version updates, format changes, and product deprecations.
+      estimationMethod: >-
+        Track engineering hours attributed to Copernicus Marine integration
+        and data pipeline maintenance
+optimization:
+  recommendations:
+    - name: Use Subset API to Minimize Download Volume
+      description: >-
+        Use the copernicusmarine subset command with tight geographic bounding
+        boxes, limited time ranges, and specific variable lists rather than
+        downloading full global products. This reduces storage costs and
+        processing time significantly.
+      savingsType: Reduced storage and compute costs
+    - name: Use open_dataset for Exploratory Analysis
+      description: >-
+        Use the open_dataset function for exploratory data analysis to lazy-load
+        data remotely without downloading full files. Only materialize and store
+        data subsets that are actually needed for production workloads.
+      savingsType: Reduced storage costs and egress fees
+    - name: Cache Zarr Datasets Locally for Repeated Access
+      description: >-
+        When running iterative analyses over the same ocean region and time
+        period, download once in Zarr format to a cloud object store or local
+        cache. Zarr's chunked format supports efficient re-reads of subsets
+        without re-downloading.
+      savingsType: Reduced repeat download costs and API load
+    - name: Select ARCO Service Type Based on Access Pattern
+      description: >-
+        Use arco-geo-series service for broad spatial queries over short time
+        windows, and arco-time-series service for long time series over small
+        geographic areas. Choosing the right service reduces server-side
+        processing time and improves download throughput.
+      savingsType: Reduced compute and network transfer time
+tags:
+  - EU Programme
+  - Free Tier
+  - Open Data
+  - Zero Direct Cost
+  - Copernicus
+  - Marine

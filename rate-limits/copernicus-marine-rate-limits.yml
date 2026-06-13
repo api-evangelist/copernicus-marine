@@ -1,0 +1,63 @@
+name: Copernicus Marine API Rate Limits
+description: >-
+  Copernicus Marine Service explicitly states there are no data volume quotas
+  or bandwidth limits on the Toolbox API for registered users. The WMTS and
+  CSW services do not publish specific rate limits. Users are expected to use
+  the services responsibly and the toolbox defaults to 15 concurrent requests
+  for metadata operations. The CSW catalogue service carries no authentication
+  requirement and no documented per-user quota.
+specificationVersion: '0.1'
+rateLimits:
+  - api: Copernicus Marine Toolbox API
+    url: https://data.marine.copernicus.eu
+    description: >-
+      No data volume quotas or bandwidth limits are imposed on registered
+      users. The Python API defaults to a maximum of 15 concurrent metadata
+      requests (max_concurrent_requests parameter) to avoid overloading
+      catalogue endpoints. For large parallel download workloads, users are
+      advised to tune concurrency settings appropriately. Authentication via
+      Copernicus Marine username and password is required.
+    limits:
+      - name: Data volume quota
+        description: No quota on volume of data downloaded
+        limit: null
+        period: unlimited
+      - name: Bandwidth quota
+        description: No quota on bandwidth consumed
+        limit: null
+        period: unlimited
+      - name: Concurrent metadata requests
+        description: Default maximum concurrent catalogue metadata requests in Python API
+        limit: 15
+        period: concurrent
+    authentication: Copernicus Marine username and password (free account required)
+    credentialsFile: ~/.copernicusmarine/.copernicusmarine-credentials
+    envVars:
+      - COPERNICUSMARINE_SERVICE_USERNAME
+      - COPERNICUSMARINE_SERVICE_PASSWORD
+  - api: Copernicus Marine WMTS API
+    url: https://wmts.marine.copernicus.eu/teroWmts
+    description: >-
+      No published rate limits for the OGC WMTS tile service. The service is
+      designed for visualization use cases and tile requests are served from
+      a cached tile store. No authentication is required to access tile
+      endpoints, though users interacting with authenticated data layers may
+      need an account.
+    limits:
+      - name: Tile requests per period
+        description: No formally published rate limit; service is cache-backed
+        limit: null
+        period: unspecified
+    authentication: None required for standard tile access
+  - api: Copernicus Marine CSW Catalogue API
+    url: https://csw.marine.copernicus.eu/geonetwork/csw-MYOCEAN-CORE-PRODUCTS/eng/csw
+    description: >-
+      No authentication is required and no user-specific quota is documented
+      for the CSW catalogue service. The service is openly accessible and
+      intended for metadata discovery of all Copernicus Marine products.
+    limits:
+      - name: Requests per period
+        description: No documented quota; open public access
+        limit: null
+        period: unspecified
+    authentication: None required

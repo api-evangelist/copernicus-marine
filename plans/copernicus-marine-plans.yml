@@ -1,0 +1,52 @@
+name: Copernicus Marine API Plans and Pricing
+description: >-
+  Copernicus Marine Service APIs are provided free of charge as part of the EU
+  Copernicus Earth Observation Programme, funded by the European Commission and
+  operated by Mercator Ocean International. There are no subscription tiers,
+  request charges, data volume fees, or bandwidth limits. All marine data
+  products are openly licensed and freely available to any user worldwide upon
+  registration of a free account. The only service requiring no account at all
+  is the CSW catalogue discovery API.
+specificationVersion: '0.1'
+plans:
+  - name: Free Open Access
+    description: >-
+      All Copernicus Marine APIs are freely available to anyone worldwide at no
+      cost. A free Copernicus Marine account (registered at
+      data.marine.copernicus.eu/register) is required to access the Toolbox
+      API and WMTS visualization service. The CSW catalogue service requires
+      no account. There are no data volume quotas, no bandwidth limits, and no
+      expiry on free accounts.
+    url: https://marine.copernicus.eu/access-data/
+    price: 0.00
+    currency: EUR
+    unit: request
+    rateLimits:
+      - name: Toolbox Data Download
+        description: No volume or bandwidth quota; unlimited downloads with a free account
+        limit: null
+        period: unlimited
+      - name: WMTS Tile Requests
+        description: No published rate limits for tile visualization requests
+        limit: null
+        period: unspecified
+      - name: CSW Catalogue Requests
+        description: No published quotas; no authentication required
+        limit: null
+        period: unspecified
+    features:
+      - Ocean temperature, salinity, sea level, and current data
+      - Sea ice concentration and thickness
+      - Biogeochemical variables (oxygen, nutrients, chlorophyll)
+      - Global ocean analysis and forecast products
+      - Regional sea products (Mediterranean, Black Sea, Arctic, Baltic, NW Shelf, IBI)
+      - Satellite observation datasets
+      - In situ observation datasets
+      - Reanalysis (hindcast) products back to 1993
+      - 10-day ocean forecasts
+      - NetCDF, Zarr, CSV, Parquet download formats
+      - No data volume or bandwidth quotas
+      - WMTS tile visualization for all products
+      - CSW catalogue discovery without authentication
+      - Python library and CLI toolbox access
+      - Docker image for containerized access
