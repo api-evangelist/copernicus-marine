@@ -1,0 +1,150 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "marine": "https://marine.copernicus.eu/vocab#",
+    "ogc": "http://www.opengis.net/ont/ogc#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/"
+  },
+  "@type": "DataCatalog",
+  "@id": "https://marine.copernicus.eu/",
+  "name": "Copernicus Marine Environment Monitoring Service",
+  "alternateName": "CMEMS",
+  "description": "The EU Copernicus Marine Environment Monitoring Service (CMEMS), operated by Mercator Ocean International, provides free and open access to authoritative information on the state of the global ocean and European regional seas.",
+  "url": "https://marine.copernicus.eu/",
+  "provider": {
+    "@type": "Organization",
+    "name": "Mercator Ocean International",
+    "url": "https://www.mercator-ocean.eu/",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "European Union",
+      "alternateName": "EU"
+    }
+  },
+  "license": "https://marine.copernicus.eu/user-corner/service-commitments-and-licence",
+  "isAccessibleForFree": true,
+  "keywords": [
+    "ocean",
+    "marine",
+    "oceanography",
+    "sea level",
+    "temperature",
+    "salinity",
+    "currents",
+    "sea ice",
+    "biogeochemistry",
+    "climate",
+    "environment",
+    "satellite",
+    "forecast",
+    "reanalysis"
+  ],
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Global Ocean and European Regional Seas"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "Free and open access with no data volume quotas or download limits. A free registration is required for most services."
+  },
+  "hasPart": [
+    {
+      "@type": "WebAPI",
+      "@id": "https://toolbox-docs.marine.copernicus.eu/",
+      "name": "Copernicus Marine Toolbox API",
+      "description": "Python library and CLI for accessing the Copernicus Marine Data Store. Supports describe, subset, get, open_dataset, and read_dataframe operations.",
+      "documentation": "https://toolbox-docs.marine.copernicus.eu/",
+      "termsOfService": "https://data.marine.copernicus.eu/register",
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "name": "describe",
+          "description": "Browse the full product catalogue and retrieve dataset metadata"
+        },
+        {
+          "@type": "DownloadAction",
+          "name": "subset",
+          "description": "Extract data by variable, geographic bounding box, time range, and depth range"
+        },
+        {
+          "@type": "DownloadAction",
+          "name": "get",
+          "description": "Download original production files with wildcard and regex filtering"
+        }
+      ],
+      "programmingLanguage": [
+        {
+          "@type": "ComputerLanguage",
+          "name": "Python"
+        }
+      ]
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://wmts.marine.copernicus.eu/teroWmts",
+      "name": "Copernicus Marine WMTS API",
+      "description": "OGC-compliant Web Map Tile Service for visualizing ocean data as raster map tiles. Supports EPSG:3857, EPSG:4326, and polar projections.",
+      "documentation": "https://help.marine.copernicus.eu/en/articles/6478168-how-to-use-wmts-to-visualize-data",
+      "conformsTo": "http://www.opengis.net/spec/wmts/1.0",
+      "potentialAction": [
+        {
+          "@type": "Action",
+          "name": "GetCapabilities",
+          "target": "https://wmts.marine.copernicus.eu/teroWmts?service=WMTS&version=1.0.0&request=GetCapabilities"
+        },
+        {
+          "@type": "Action",
+          "name": "GetTile",
+          "description": "Retrieve cached raster image tiles in JPEG or PNG format"
+        },
+        {
+          "@type": "Action",
+          "name": "GetLegend",
+          "description": "Obtain dynamic map legends in SVG or JSON format"
+        },
+        {
+          "@type": "Action",
+          "name": "GetFeatureInfo",
+          "description": "Query pixel-level data values at specific geographic locations"
+        }
+      ]
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://csw.marine.copernicus.eu/geonetwork/csw-MYOCEAN-CORE-PRODUCTS/eng/csw",
+      "name": "Copernicus Marine CSW Catalogue API",
+      "description": "OGC-compliant Catalogue Service for the Web for metadata discovery over the full product catalogue. Based on CSW 2.0.2 with ISO 19115 metadata records.",
+      "documentation": "https://help.marine.copernicus.eu/en/articles/6643157-how-to-access-to-metadata-using-the-catalogue-service-on-the-web-csw",
+      "conformsTo": "http://www.opengis.net/spec/cat/csw/2.0.2",
+      "potentialAction": [
+        {
+          "@type": "Action",
+          "name": "GetCapabilities",
+          "target": "https://csw.marine.copernicus.eu/geonetwork/csw-MYOCEAN-CORE-PRODUCTS/eng/csw?service=CSW&REQUEST=GetCapabilities"
+        },
+        {
+          "@type": "Action",
+          "name": "DescribeRecord",
+          "description": "Retrieve metadata schema descriptions"
+        },
+        {
+          "@type": "SearchAction",
+          "name": "GetRecords",
+          "description": "Search and filter catalogue entries"
+        },
+        {
+          "@type": "Action",
+          "name": "GetRecordById",
+          "description": "Retrieve a specific product record by identifier"
+        }
+      ]
+    }
+  ],
+  "sameAs": [
+    "https://github.com/mercator-ocean",
+    "https://www.linkedin.com/company/copernicus-marine-service"
+  ]
+}

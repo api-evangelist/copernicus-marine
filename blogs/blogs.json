@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "provider": "copernicus-marine",
+    "blog_url": "https://marine.copernicus.eu/news",
+    "last_fetched": "2026-06-13"
+  },
+  "posts": [
+    {
+      "title": "Understanding Our Ocean IV: The Ocean's Digital Twin",
+      "url": "https://marine.copernicus.eu/news/understanding-our-ocean-iv-digital-twin-ocean",
+      "date": "2026-06-08"
+    },
+    {
+      "title": "July Release: Expanding Copernicus Marine Service Through Global Collaboration",
+      "url": "https://marine.copernicus.eu/news/july-release-expanding-copernicus-marine-service-through-global-collaboration",
+      "date": "2026-06-05"
+    },
+    {
+      "title": "Understanding Our Ocean III: Predicting the Ocean",
+      "url": "https://marine.copernicus.eu/news/understanding-our-ocean-iii-predicting-ocean",
+      "date": "2026-05-29"
+    },
+    {
+      "title": "Understanding Our Ocean II: Collecting Ocean Data",
+      "url": "https://marine.copernicus.eu/news/understanding-our-ocean-ii-collecting-ocean-data",
+      "date": "2026-05-26"
+    },
+    {
+      "title": "The North Atlantic Ocean in bloom – and why it matters",
+      "url": "https://marine.copernicus.eu/news/north-atlantic-ocean-bloom-and-why-it-matters",
+      "date": "2026-05-22"
+    },
+    {
+      "title": "How Artificial Intelligence is Powering the Next Generation of Operational Marine Products",
+      "url": "https://marine.copernicus.eu/news/how-artificial-intelligence-powering-next-generation-operational-marine-products",
+      "date": "2026-05-04"
+    },
+    {
+      "title": "Understanding Our Ocean I: Ocean Observing",
+      "url": "https://marine.copernicus.eu/news/understanding-our-ocean-i-ocean-observing",
+      "date": "2026-04-29"
+    },
+    {
+      "title": "Copernicus Marine User Uptake in 2025: Growth, Reach and Real-World Impact",
+      "url": "https://marine.copernicus.eu/news/copernicus-marine-user-uptake-2025",
+      "date": "2026-04-28"
+    },
+    {
+      "title": "Copernicus Marine Service Publishes 2025 User Feedback Report",
+      "url": "https://marine.copernicus.eu/news/copernicus-marine-service-publishes-2025-user-feedback-report",
+      "date": "2026-04-23"
+    },
+    {
+      "title": "Marine Data for Maritime Spatial Planning: Key Outcomes from the Copernicus Marine Service Workshop",
+      "url": "https://marine.copernicus.eu/news/marine-data-maritime-spatial-planning-key-outcomes-copernicus-marine-service-workshop",
+      "date": "2026-04-09"
+    },
+    {
+      "title": "April Releases: Copernicus Marine Launches Three New Products",
+      "url": "https://marine.copernicus.eu/news/april-releases-copernicus-marine-launches-three-new-products",
+      "date": "2026-04-03"
+    },
+    {
+      "title": "Copernicus Marine Data Powers the WMO Global Climate Report 2025 on Ocean Warming and Energy Imbalance",
+      "url": "https://marine.copernicus.eu/news/copernicus-marine-data-powers-wmo-global-climate-report-2025-ocean-warming-and-energy",
+      "date": "2026-03-31"
+    },
+    {
+      "title": "How Copernicus Marine Tools Monitor Climate Change Impacts in Polar Regions",
+      "url": "https://marine.copernicus.eu/news/how-copernicus-marine-tools-monitor-climate-change-impacts-polar-regions",
+      "date": "2026-03-30"
+    },
+    {
+      "title": "Copernicus Marine and EDITO make a big splash at EU Ocean Days",
+      "url": "https://marine.copernicus.eu/news/copernicus-marine-and-edito-make-big-splash-eu-ocean-days",
+      "date": "2026-03-16"
+    },
+    {
+      "title": "New NECCTON Ocean Viewer opens access to next-generation marine ecosystem data",
+      "url": "https://marine.copernicus.eu/news/new-neccton-ocean-viewer-opens-access-next-generation-marine-ecosystem-data",
+      "date": "2026-03-12"
+    },
+    {
+      "title": "Copernicus Marine launches new podcast Decoding the Ocean",
+      "url": "https://marine.copernicus.eu/news/copernicus-marine-launches-new-podcast-decoding-ocean",
+      "date": "2026-03-11"
+    },
+    {
+      "title": "Copernicus Marine Service at the Ocean Sciences Meeting",
+      "url": "https://marine.copernicus.eu/news/copernicus-marine-service-ocean-sciences-meeting",
+      "date": "2026-03-05"
+    },
+    {
+      "title": "Pioneering Satellite Data Enhances Ocean and Sea-Level Monitoring",
+      "url": "https://marine.copernicus.eu/news/pioneering-satellite-data-enhances-ocean-and-sea-level-monitoring",
+      "date": "2026-02-06"
+    },
+    {
+      "title": "A New Platform to Strengthen User Dialogue and Shape the Future of the Copernicus Marine Service",
+      "url": "https://marine.copernicus.eu/news/new-platform-strengthen-user-dialogue-and-shape-future-copernicus-marine-service",
+      "date": "2026-01-30"
+    },
+    {
+      "title": "Copernicus Marine to Highlight its Operational Ocean Intelligence Capabilities at EU Space Conference",
+      "url": "https://marine.copernicus.eu/news/copernicus-marine-highlight-its-operational-ocean-intelligence-capabilities-eu-space",
+      "date": "2026-01-26"
+    }
+  ]
+}
