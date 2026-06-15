@@ -26,7 +26,7 @@
       "date": "2026-05-26"
     },
     {
-      "title": "The North Atlantic Ocean in bloom – and why it matters",
+      "title": "The North Atlantic Ocean in bloom \u2013 and why it matters",
       "url": "https://marine.copernicus.eu/news/north-atlantic-ocean-bloom-and-why-it-matters",
       "date": "2026-05-22"
     },
@@ -105,5 +105,14 @@
       "url": "https://marine.copernicus.eu/news/copernicus-marine-highlight-its-operational-ocean-intelligence-capabilities-eu-space",
       "date": "2026-01-26"
     }
-  ]
+  ],
+  "repo": "copernicus-marine",
+  "feeds": [
+    {
+      "source": "https://www.linkedin.com/company/copernicus-marine-service",
+      "error": "HTTPError"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-06-14T20:42:17Z"
 }
