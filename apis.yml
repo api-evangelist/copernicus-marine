@@ -14,7 +14,7 @@ description: >-
   require a free Copernicus Marine account, except the CSW which is fully open,
   and there are no data volume quotas or download limits.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/copernicus-marine/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -51,7 +51,7 @@ apis:
       variables COPERNICUSMARINE_SERVICE_USERNAME and
       COPERNICUSMARINE_SERVICE_PASSWORD. A free Copernicus Marine account is
       required.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://toolbox-docs.marine.copernicus.eu/
     baseURL: https://data.marine.copernicus.eu
     tags:
@@ -85,7 +85,7 @@ apis:
       and depth dimensions are supported via TIME and ELEVATION parameters.
       The service is fully OGC WMTS 1.0.0 compliant and INSPIRE conformant. No
       authentication is required for tile access.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://help.marine.copernicus.eu/en/articles/6478168-how-to-use-wmts-to-visualize-data
     baseURL: https://wmts.marine.copernicus.eu/teroWmts
     tags:
@@ -110,7 +110,7 @@ apis:
       metadata records. No authentication or Copernicus Marine account is
       required, and there are no documented rate limits or quotas for the
       catalogue service.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://help.marine.copernicus.eu/en/articles/6643157-how-to-access-to-metadata-using-the-catalogue-service-on-the-web-csw
     baseURL: https://csw.marine.copernicus.eu/geonetwork/csw-MYOCEAN-CORE-PRODUCTS/eng/csw
     tags:
