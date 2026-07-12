@@ -126,6 +126,8 @@ apis:
       - type: GetCapabilities
         url: https://csw.marine.copernicus.eu/geonetwork/csw-MYOCEAN-CORE-PRODUCTS/eng/csw?service=CSW&REQUEST=GetCapabilities
 common:
+  - type: DomainSecurity
+    url: security/copernicus-marine-domain-security.yml
   - type: Website
     url: https://marine.copernicus.eu/
   - type: Documentation
