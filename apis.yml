@@ -138,6 +138,13 @@ apis:
       - type: GetCapabilities
         url: https://csw.marine.copernicus.eu/geonetwork/csw-MYOCEAN-CORE-PRODUCTS/eng/csw?service=CSW&REQUEST=GetCapabilities
 common:
+  - type: IssueTracker
+    url: https://github.com/mercator-ocean/copernicus-marine-toolbox/issues
+  - type: Releases
+    url: https://github.com/mercator-ocean/copernicus-marine-toolbox/releases
+  - type: License
+    name: EUPL-1.2
+    url: https://github.com/mercator-ocean/copernicus-marine-toolbox/blob/main/LICENSE
   - type: DomainSecurity
     url: security/copernicus-marine-domain-security.yml
   - type: Website
