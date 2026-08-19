@@ -1,4 +1,4 @@
-aid: https://raw.githubusercontent.com/api-evangelist/copernicus-marine/refs/heads/main/apis.yml
+aid: copernicus-marine
 name: Copernicus Marine
 description: >-
   The EU Copernicus Marine Environment Monitoring Service (CMEMS), operated by
@@ -30,7 +30,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/copernicus
 url: https://raw.githubusercontent.com/api-evangelist/copernicus-marine/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 tags:
   - Ocean
   - Marine
