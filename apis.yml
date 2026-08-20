@@ -73,6 +73,14 @@ apis:
       - Zarr
       - Python
       - CLI
+      - Downloads
+    tags_raw:
+      - Ocean Data
+      - Subsetting
+      - NetCDF
+      - Zarr
+      - Python
+      - CLI
       - Download
     properties:
       - type: Documentation
